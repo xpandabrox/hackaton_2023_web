@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel = "stylesheet" href="styles.css">
     <link rel = "stylesheet" href="style.css">
-    
-    
+    <script src="tests.js"> </script>
     <script src="test_2.js"> </script>
     
 </head>
@@ -20,11 +20,11 @@
         
         <h1>В процессе</h1>
         
-        <button class="button">
+        <button class="button" id="button" onclick="JJJ('absolute','1')">
         <div>
-        <a href="test_2.php">
+        
         +
-        </a>
+        
         </div>
     </button>
 
@@ -184,7 +184,65 @@
 </td>
     </tr>
 </table>
+<div class="JJJ" id="JJJ">
+<div class="MAIN_DIV" id="MAIN_DIV">
+<div>
+    <button class="X" id="X" onclick="JJJ('static','0')">X</button>
+        <div>
+            <button onclick=" visibility('scroll_2')" ondblclick="visibility('scroll_revers_2')">Новый запрос</button>
+            
+        </div>
+</div>
+        <div class="input" id="inputs"  >
+            <form action="php_script.php" method="post">
+        
+         
+            <div>
+                Название задачи
+                <p><input type="text" name="NAME_TASK"></p>
+            </div>
+            <div>
+                Цели задачи
+                <p> <input type="text" class="CEL" name="CEL_TASK"></p>
+            </div>
+            
+            <div>
+                Сроки на выполнение
+                <p> <input type="date" name="TIME_TASK"></p>
+                <p><input type="time" name="TIME_TASK"></p>
+            </div>
+            <div>
+                Количество
+                <p><input type="text" name="NUMBERS_TASK"></p>
+                </div>
+            <div>
+                <input type="submit"  value="Сохранить запрос">
+            </div>    
+            </form>
+            <div>
+                <button onclick="DOP_DETALS('scroll')" ondblclick="DOP_DETALS('scroll_revers')">Дополнительные детали</button>
+                <div class="DOP_DETALS" id="DOP_DETALS">
+                <div>
+                Приоритет
+                <p><input type="radio">Низкий</p>
+                <p><input type="radio">Средний</p>
+                <p><input type="radio">Высокий</p>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    
+</div>
 
+    <div>
+        <input type="submit"  value="Дней до дедлайна" onclick="deadline('1')" ondblclick="deadline('0')">
+        <div class="deadline" id="deadline" name="deadline">
+        
+        </div>
+    </div>
+</div>
 
 
 </body>

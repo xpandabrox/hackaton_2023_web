@@ -5,14 +5,18 @@
 }
 
 .JJJ{
-    position: absolute;
+    
     height: 100%;
     width: 100%;
-    background-color: gray;
+    position:static;
     overflow: auto;
-    animation: 0.5s background_1 ease-in-out forwards ;
+    
+    
     /* animation: scroll 1s ease-in-out forwards; */
     
+}
+button.X{
+    margin-left: 90%;
 }
 .MAIN_DIV{
     padding: 5px;
@@ -26,7 +30,7 @@
     border-radius: 20px;
     border-color: rgb(136, 123, 201);
     box-shadow: 0 0 50px 10px rgb(104, 46, 145);
-    
+    opacity: 0;
 }
 
 .input{
@@ -95,8 +99,36 @@ input,button{
 @keyframes background_1 {
     0%{
         background-color: rgb(136, 123, 201);;
+        
     }
     100%{
         background-color: rgb(33 28 56);;
+        
+    }
+}
+@keyframes background_2 {
+    0%{
+        background-color: rgb(33 28 56);;
+       
+    }
+    100%{
+        background-color: rgb(136, 123, 201);;
+        
+    }
+}
+@keyframes opacity_1 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes opacity_2 {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
     }
 }
