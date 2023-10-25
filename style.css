@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.up{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+.inputs{
+    opacity: 0;
+}
+.process, .work, .denied{
+    padding: 20px;
+
+
+}
+.process h1, .work h1, .denied h1{
+    text-align: center;
+}
+.t1 ,.t2,.t3{
+    border: 1px solid;
+    border-color: gray;
+    height: 50px;
+}
+table{
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.process .t1{
+    padding: 20px;
+    margin: 5px;
+    border-left:solid rgb(67, 200, 241) ;
+    border-radius: 10px;
+    background-color: white;
+}
+.work  .t2{
+    padding: 20px;
+    margin: 5px;
+    border-left:solid rgb(143, 67, 241) ;
+    border-radius: 10px;
+    background-color: white;
+}
+.denied .t3{
+    padding: 20px;
+    margin: 5px;
+    border-left:solid rgb(241, 67, 67) ;
+    border-radius: 10px;
+    background-color: white;
+}
+.process{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.process:hover, .work:hover, .denied:hover{
+
+    background-color: rgb(226, 249, 252);
+
+}
+.t1:hover{
+    animation: t1 1s  ease-in-out forwards;
+    
+}
+
+.t2:hover{
+    animation: t1 1s  ease-in-out forwards;
+    
+}
+.t3:hover {
+    animation: t1 1s  ease-in-out forwards;
+    
+}
+
+
+
+
+
+@keyframes t1 {
+    0%{
+        height: 50px;
+    }
+    100%{
+        height: +200px;
+    }
+}
