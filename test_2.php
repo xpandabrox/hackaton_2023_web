@@ -4,46 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Разработка WEB приложения</title>
-    <link rel = "stylesheet" href="style_2.css">
-    <script src="test.js"></script>
+    <link rel = "stylesheet" href="styles.css">
+    <script src="tests.js"></script>
 </head>
 <body>
-   
-<div>
-        <button onclick=" visibility('auto')" ondblclick="visibility('0px')">НОВЫЙ ЗАПРОС</button>
-        <div class="inputs" id="inputs"  >
-        <form action="php_script.php" method="post">
+<div class="JJJ">
+<div class="MAIN_DIV">
+    
+        <div>
+            <button onclick=" visibility('scroll_2')" ondblclick="visibility('scroll_revers_2')">Новый запрос</button>
+        </div>
+        <div class="input" id="inputs"  >
+            <form action="php_script.php" method="post">
         
          
             <div>
-                НАЗВАНИЕ ЗАДАЧИ
-                <input type="text" name="NAME_TASK">
+                Название задачи
+                <p><input type="text" name="NAME_TASK"></p>
             </div>
             <div>
-                ЦЕЛИ ЗАДАЧИ
-                <input type="text" class="CEL" name="CEL_TASK">
+                Цели задачи
+                <p> <input type="text" class="CEL" name="CEL_TASK"></p>
             </div>
             
             <div>
-                СРОКИ ВЫПОЛНЕНИЯ В ДНЯХ
-                <input type="text" name="TIME_TASK">
+                Сроки на выполнение
+                <p> <input type="date" name="TIME_TASK"></p>
+                <p><input type="time" name="TIME_TASK"></p>
             </div>
             <div>
-                КОЛИЧЕСТВО УЧАСТНИКОВ
-                <input type="text" name="NUMBERS_TASK">
+                Количество
+                <p><input type="text" name="NUMBERS_TASK"></p>
                 </div>
             <div>
-                <input type="submit"  value="СОХРАНИТЬ ЗАПРОС">
+                <input type="submit"  value="Сохранить запрос">
             </div>    
-        </form>
+            </form>
             <div>
-                <button onclick="DOP_DETALS('100px')" ondblclick="DOP_DETALS('0px')">ДОПОЛНИТЕЛЬНЫЕ ДЕТАЛИ</button>
+                <button onclick="DOP_DETALS('scroll')" ondblclick="DOP_DETALS('scroll_revers')">Дополнительные детали</button>
                 <div class="DOP_DETALS" id="DOP_DETALS">
                 <div>
-                ПРИОРИТЕТ
-                <p><input type="radio">НИЗКИЙ
-                <input type="radio">СРЕДНИЙ
-                <input type="radio">ВЫСОКИЙ</p>
+                Приоритет
+                <p><input type="radio">Низкий</p>
+                <p><input type="radio">Средний</p>
+                <p><input type="radio">Высокий</p>
                 </div>
                 
             </div>
@@ -54,10 +58,11 @@
 </div>
 
 <div>
-    <input type="submit"  value="ДНЕЙ ДО ДЕДЛАЙНА" onclick="deadline('1')" ondblclick="deadline('0')">
+    <input type="submit"  value="Дней до дедлайна" onclick="deadline('1')" ondblclick="deadline('0')">
     <div class="deadline" id="deadline" name="deadline">
         
     </div>
+</div>
 </div>
 </body>
 </html>

@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+.JJJ{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    overflow: auto;
+    animation: 0.5s background_1 ease-in-out forwards ;
+    /* animation: scroll 1s ease-in-out forwards; */
+    
+}
+.MAIN_DIV{
+    padding: 5px;
+    margin-left: 45%;
+    margin-top: 200px;
+    width: 230px;
+    border: black solid;
+    background-color: rgb(205, 205, 205); 
+    border: 5px;
+    border-style:solid;
+    border-radius: 20px;
+    border-color: rgb(136, 123, 201);
+    box-shadow: 0 0 50px 10px rgb(104, 46, 145);
+    
+}
+
+.input{
+    text-align: left;
+    height: 0;
+    width: 400px;
+    overflow: auto;
+    overflow: hidden;
+    
+    
+}
+.CEL{
+    
+    height: auto;
+    width: auto;
+}
+.deadline{
+    
+    opacity: 0;
+}
+.DOP_DETALS{
+    width: 400px;
+    height: 0px;
+    overflow: auto;
+    overflow: hidden;
+    
+}
+input,button{
+    border-radius:10px ;
+    background-color:rgb(187 184 184);
+    
+    /* border: aqua solid 5px; */
+}
+@keyframes scroll {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100px;
+    }
+}
+@keyframes scroll_2 {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 340px;
+    }
+}
+@keyframes scroll_revers {
+    0%{
+        height: 100px;
+    }
+    100%{
+        height: 0;
+    }
+}
+@keyframes scroll_revers_2 {
+    0%{
+        height: 340px;
+    }
+    100%{
+        height: 0;
+    }
+}
+@keyframes background_1 {
+    0%{
+        background-color: rgb(136, 123, 201);;
+    }
+    100%{
+        background-color: rgb(33 28 56);;
+    }
+}
