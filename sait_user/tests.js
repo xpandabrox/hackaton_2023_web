@@ -19,6 +19,11 @@ function visibility(name) { //появление картинки
     elem.style.animationDuration = '1s';
     elem.style.animationFillMode='forwards';
   }
+
+  function NEW_USER(bim){
+    window.location.assign("http://bimbam/HACATOON_2/new_user/auth_copy.php");
+  }
+
 function JJJ(position,opacity){
     var elem = document.getElementById("JJJ");
     var elem_2 = document.getElementById("MAIN_DIV");
@@ -45,4 +50,8 @@ function JJJ(position,opacity){
     elem_2.style.animationFillMode='forwards';
     }
 }
-  
+ 
+
+
+
+

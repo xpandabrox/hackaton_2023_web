@@ -33,7 +33,7 @@ if (isset($_POST["login"]) && isset($_POST["psw"])) {
             
                 else{
                     
-                    //  header( 'Location: http://bimbam/HACATOON_2/avtor/auth.php' );
+                     header( 'Location: http://bimbam/HACATOON_2/avtor/auth.php' );
                     
                     
                 }

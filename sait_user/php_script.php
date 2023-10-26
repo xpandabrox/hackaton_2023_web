@@ -14,7 +14,7 @@ if (isset($_POST["PRIORITY_TASK"]) && isset($_POST["DATE_TASK"]) && isset($_POST
 
     $sql = "INSERT INTO TASK (name_task,cel_task,data_task,time_task,numbers_task,priority_task) VALUES ('$NAME_TASK', '$CEL_TASK','$DATE_TASK','$TIME_TASK','$NUMBERS_TASK','$PRIORITY_TASK')";
     if($conn->query($sql)){
-        echo "Данные успешно добавлены";
+        header( 'Location: http://bimbam/HACATOON_2/sait_admin/test.php' );
     } else{
         echo "Ошибка: " . $conn->error;
     }

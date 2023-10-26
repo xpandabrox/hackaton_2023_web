@@ -7,13 +7,9 @@ if($conn->connect_error){
     $id_task = 'SELECT id_task FROM TASK';
     $result = $conn->query($sql);
     $result_id = $conn->query($id_task);
-    echo'<table>';
     foreach($result  as $row){
-        echo '<tr >';
-            echo '<td>'
-            .'<div class="process">' 
-            .'<h1>В процессе</h1>'
-            .'<div class="t1" >'
+            echo
+            '<div class="t3" >'
             .'<h7>'
             .$row['name_task']
             .'</h7>'
@@ -27,8 +23,11 @@ if($conn->connect_error){
             .$row['numbers_task']
             .'<div> Приоритет '
             .$row['priority_task'] 
-            . '</td>';
-        echo '</tr>';    
+            .'</div>'
+            .'</div>'
+            .'</div>'
+            .'</div>'
+            .'</div>'
+            .'</div>';    
     }
-    echo'</table>';
-?>
+?> 

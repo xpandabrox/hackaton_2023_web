@@ -50,4 +50,8 @@ function JJJ(position,opacity){
     elem_2.style.animationFillMode='forwards';
     }
 }
-  
+ 
+
+
+
+

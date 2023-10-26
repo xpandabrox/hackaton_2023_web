@@ -7,7 +7,7 @@
     <link rel = "stylesheet" href="styles.css">
     <link rel = "stylesheet" href="style.css">
     <script src="tests.js"> </script>
-    <script src="test_2.js"> </script>
+    <!-- <script src="test_2.js"> </script> -->
     
 </head>
 <body vlink="black" link="black" >
@@ -25,37 +25,33 @@
     <tr >
         <td > 
         <div class="process"  >
-        
+            
             <h1>В процессе</h1>
         
 
 
-            <!-- <div class="t1" >
-        
-                 <h7>• Task 1</h7>
-                <div>
-                     Инфа внутри задачи.
-                    <div class="date">
-                        Установите сроки выполнения задачи
-                        <div>
-                            <input type="date">
-                            <input type="time">
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+            
             <?php
-$conn = new mysqli('localhost', 'root', '', 'HACATOON');
-if($conn->connect_error){
+            $i=1;
+            $conn = new mysqli('localhost', 'root', '', 'HACATOON');
+            
+    
+    if($conn->connect_error){
     die('Ошибка: ' . $conn->connect_error);
 }
+    $a=0;
+    $id=0;
+    $w_id=0;
+    $ww_id[]= $a;
     $sql = 'SELECT * FROM TASK';
+    $del ='DELETE FROM TASK WHERE TASK.id_task = id;';
+    $del_1 =$conn->query($del) ;
     $id_task = 'SELECT id_task FROM TASK';
     $result = $conn->query($sql);
     $result_id = $conn->query($id_task);
     foreach($result  as $row){
-            echo
-            '<div class="t1" >'
+            $ww_id[$a]=
+            '<div class="t1" id='.$a.'>'
             .'<h7>'
             .$row['name_task']
             .'</h7>'
@@ -68,101 +64,95 @@ if($conn->connect_error){
             .' <div>Количество участников '
             .$row['numbers_task']
             .'<div> Приоритет '
-            .$row['priority_task'] 
+            .$row['priority_task']
+            .'<div><input type="submit" id='.' name="" onclick="I_MINUS(+1)" value="<" style="width:20px">'
+            .'<input type="submit" '.' name="" onclick="I_PLUS(+1)" value=">" style="width:20px"></div>'
+            .'<div><input type="submit" '.' name="" onclick="DEL()" value="Удалить задачу" style="width:100px"></div>'
             .'</div>'
             .'</div>'
             .'</div>'
             .'</div>'
             .'</div>'
             .'</div>';    
+            $a++;
+             
     }
+    
+    while($w_id!=$a){
+        echo $ww_id[$w_id];
+        $w_id++;
+    }
+
+
+
+
+
 ?>
+<!-- <script>
+    var js_var = <?php echo $i; ?>;
+    // var js_del = <?php echo $del; ?>;
+    var js_id = <?php echo $a; ?>;
+    var js_id_ww = <?php echo $id; ?>;
+    function I_PLUS(){
+    
+    if(js_var>3){
+        js_var--;
+        console.log(js_var);
+    }else if (js_var<3){
+        js_var++;
+        console.log(js_var);
+    }else if (js_var==3){
+       
+        console.log(js_var);
+    }
+    }
+    function I_MINUS(){
+    
+    if(js_var<1){
+        js_var++;
+        
+        console.log(js_var);
+    }else if(js_var>1){
+        js_var--;
+        console.log(js_var);
+    }else if(js_var==1){
+        
+        console.log(js_var);
+    }
+    }
+    function DEL(){
+        while((js_id>js_id_ww)||(js_id<js_id_ww)||(js_id==js_id_ww)){
+        if(js_id==js_id_ww){
+            console.log(js_id_ww);
+            break;
+            
+            
+        }else if(js_id<js_id_ww){
+            console.log(js_id_ww);
+            js_id--;
+            
+        }else if(js_id>js_id_ww){
+            console.log(js_id_ww);
+            js_id++;
+            
+        }
+    }
+    }
+    
+
+</script> -->
             
         </div>
-        <td> 
-    <div class="work">
+        <td > 
+    <div class="work" >
         <h1>Выполнено</h1>
-        <!-- <div class="t2"><h7>• Task 1</h7>
-            <div>Инфа внутри задачи.
-                <div class="date">
-                    Установите сроки выполнения задачи
-                    <div>
-                        <input type="date">
-                        <input type="time">
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <?php
-$conn = new mysqli('localhost', 'root', '', 'HACATOON');
-if($conn->connect_error){
-    die('Ошибка: ' . $conn->connect_error);
-}
-    $sql = 'SELECT * FROM TASK';
-    $id_task = 'SELECT id_task FROM TASK';
-    $result = $conn->query($sql);
-    $result_id = $conn->query($id_task);
-    foreach($result  as $row){
-            echo
-            '<div class="t2" >'
-            .'<h7>'
-            .$row['name_task']
-            .'</h7>'
-            .  '<div> '
-            . $row['cel_task'] 
-            .'<div class="date"> Установите сроки выполнения задачи <div> Дата '
-            .$row['data_task']
-            .'   Время '
-            .$row['time_task']
-            .' <div>Количество участников '
-            .$row['numbers_task']
-            .'<div> Приоритет '
-            .$row['priority_task'] 
-            .'</div>'
-            .'</div>'
-            .'</div>'
-            .'</div>'
-            .'</div>'
-            .'</div>';    
-    }
-?>
+        
+        
         
         <td> 
     <div class="denied">
         <h1>Отложено</h1>
-        <?php
-$conn = new mysqli('localhost', 'root', '', 'HACATOON');
-if($conn->connect_error){
-    die('Ошибка: ' . $conn->connect_error);
-}
-    $sql = 'SELECT * FROM TASK';
-    $id_task = 'SELECT id_task FROM TASK';
-    $result = $conn->query($sql);
-    $result_id = $conn->query($id_task);
-    foreach($result  as $row){
-            echo
-            '<div class="t3" >'
-            .'<h7>'
-            .$row['name_task']
-            .'</h7>'
-            .  '<div> '
-            . $row['cel_task'] 
-            .'<div class="date"> Установите сроки выполнения задачи <div> Дата '
-            .$row['data_task']
-            .'   Время '
-            .$row['time_task']
-            .' <div>Количество участников '
-            .$row['numbers_task']
-            .'<div> Приоритет '
-            .$row['priority_task'] 
-            .'</div>'
-            .'</div>'
-            .'</div>'
-            .'</div>'
-            .'</div>'
-            .'</div>';    
-    }
-?>
+         
 </tr>
 </table>
 <div class="JJJ" id="JJJ">
@@ -198,7 +188,7 @@ if($conn->connect_error){
                 </div>
             
             <div>
-                <!-- <button onclick="DOP_DETALS('scroll')" ondblclick="DOP_DETALS('scroll_revers')">Дополнительные детали</button> -->
+                  
                 <div >
                 <div>
                 Приоритет от 0 до 100
@@ -219,12 +209,7 @@ if($conn->connect_error){
     
 </div>
 
-    <div>
-        <input type="submit"  value="Дней до дедлайна" onclick="deadline('1')" ondblclick="deadline('0')">
-        <div class="deadline" id="deadline" name="deadline">
-        
-        </div>
-    </div>
+    
 </div>
 
 

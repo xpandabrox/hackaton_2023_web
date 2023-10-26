@@ -39,12 +39,12 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
     $password = $conn->real_escape_string($_POST["password"]);
     
     $MAX_ID = "SELECT login FROM `USER_CREATE`;";
-    $JOPA = "SELECT * \n"
+    $PROSTITE = "SELECT * \n"
 
     . "FROM `USER_CREATE` \n"
 
     . "WHERE ROW(login,password)=ROW('$login', '$password');";
-    if($result=$conn->query($JOPA)){
+    if($result=$conn->query($PROSTITE)){
         foreach($result as $row){
             
         }

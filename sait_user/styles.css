@@ -61,9 +61,8 @@ button.X{
 input,button{
     border-radius:10px ;
     background-color:rgb(187 184 184);
-    
-    /* border: aqua solid 5px; */
 }
+ 
 @keyframes scroll {
     0%{
         height: 0;
