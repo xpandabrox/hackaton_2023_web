@@ -3,19 +3,13 @@ $conn = new mysqli('localhost', 'root', '', 'HACATOON');
 if($conn->connect_error){
     die('Ошибка: ' . $conn->connect_error);
 }
-
     $sql = 'SELECT * FROM TASK';
     $id_task = 'SELECT id_task FROM TASK';
     $result = $conn->query($sql);
     $result_id = $conn->query($id_task);
-
     echo'<table>';
-    
     foreach($result  as $row){
-        
-        
         echo '<tr >';
-        
             echo '<td>'
             .'<div class="process">' 
             .'<h1>В процессе</h1>'
@@ -34,15 +28,7 @@ if($conn->connect_error){
             .'<div> Приоритет '
             .$row['priority_task'] 
             . '</td>';
-            
-            
-        echo '</tr>';
-        
-
-        
+        echo '</tr>';    
     }
-    
     echo'</table>';
-
-
 ?>
