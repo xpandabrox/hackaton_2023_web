@@ -1,4 +1,4 @@
 
 function Imba(){
-    window.location.href="test.php";
+    window.location.assign("http://bimbam/HACATOON_2/sait_admin/test.php");
 }

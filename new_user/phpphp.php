@@ -46,5 +46,5 @@ else if($row["login"]=$login){
     $conn->close();
     
 }
-//Я того рот ебал
+
 ?>

@@ -11,36 +11,26 @@
 
 <div class="auth">
 				<span class="fontar"><h1>Авторизация</h1></span>
-	<form action="authah.php" method="post">
-		<div class="sosa">
+	<!-- <form action="auth.php" method="post"> -->
+		<div class="sosa">	
 			<label>Введите логин:   </label>
-			<input type="text" name="login" placeholder="Логин" >
+			<input type="text" name="login" placeholder="Логин" id="login" value="">
 		</div>
 		<div class="sosa">
 			<label>Введите пароль:   </label>
-			<input type="text" name="psw" placeholder="Пароль" >
+			<input type="text" name="psw" placeholder="Пароль" id="psw" value="">
 		</div>
 		<div class="sosas">
 			<input type="submit" name="authar" value="Вход" onclick="Imba()">
 		</div>
-	</form>	
-
-
-	
-
-
-
-
-
-			
-	
+	<!-- </form>	 -->
 
 
 	</div>
 
 </head>
 <body>
-
+	
 </body>
 </html>
 

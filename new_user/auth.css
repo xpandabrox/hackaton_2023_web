@@ -32,7 +32,13 @@ body{
 .sosa{
 	padding: 10px;
 }
+.RETURN{
+	padding: 10px;
+	text-align: right;
+	padding-left: 65%;
+}
 .sosas{
+	
 	padding: 10px;
 	text-align: right;
 	padding-left: 65%;
