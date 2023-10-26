@@ -13,7 +13,7 @@
 <body vlink="black" link="black">
 
 
-<table class="tabtask">
+<table class="tabtask" >
     <tr >
         <td > 
         <div class="process"  >
@@ -208,7 +208,7 @@
             
             <div>
                 Сроки на выполнение
-                <p> <input type="date" name="TIME_TASK"></p>
+                <p> <input type="date" name="DATE_TASK"></p>
                 <p><input type="time" name="TIME_TASK"></p>
             </div>
             <div>
@@ -218,18 +218,17 @@
             <div>
                 <input type="submit"  value="Сохранить запрос">
             </div>    
-            </form>
+            
             <div>
-                <button onclick="DOP_DETALS('scroll')" ondblclick="DOP_DETALS('scroll_revers')">Дополнительные детали</button>
-                <div class="DOP_DETALS" id="DOP_DETALS">
+                <!-- <button onclick="DOP_DETALS('scroll')" ondblclick="DOP_DETALS('scroll_revers')">Дополнительные детали</button> -->
+                <div >
                 <div>
-                Приоритет
-                <p><input type="radio">Низкий</p>
-                <p><input type="radio">Средний</p>
-                <p><input type="radio">Высокий</p>
+                Приоритет от 0 до 100
+                <p><input type="text" name="PRIORITY_TASK"></p>
                 </div>
                 
             </div>
+            </form>
         </div>
         
         

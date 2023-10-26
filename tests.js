@@ -23,7 +23,7 @@ function JJJ(position,opacity){
     var elem = document.getElementById("JJJ");
     var elem_2 = document.getElementById("MAIN_DIV");
     elem.style.position=position;
-    elem_2.style.opacity=opacity;
+  
     if(position=="absolute"){
     elem.style.animationName ='background_1';
     elem.style.animationTimingFunction='ease-in-out';
