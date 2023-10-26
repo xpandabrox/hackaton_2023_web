@@ -14,11 +14,11 @@
 	<!-- <form action="auth.php" method="post"> -->
 		<div class="sosa">	
 			<label>Введите логин:   </label>
-			<input type="text" name="login" placeholder="Логин" id="login" value="">
+			<input type="text" name="login" placeholder="Логин" id="login" >
 		</div>
 		<div class="sosa">
 			<label>Введите пароль:   </label>
-			<input type="text" name="psw" placeholder="Пароль" id="psw" value="">
+			<input type="text" name="psw" placeholder="Пароль" id="psw" >
 		</div>
 		<div class="sosas">
 			<input type="submit" name="authar" value="Вход" onclick="Imba()">
