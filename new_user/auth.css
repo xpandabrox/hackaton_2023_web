@@ -1,0 +1,44 @@
+*{
+	display: flex;
+	padding: 0;
+	flex-direction: column;
+	margin: 0;
+	justify-content: center;
+	align-items: center;
+	top: 200px;
+	
+}
+
+.fontar{
+	font-family: 'Roboto Slab', serif;
+}
+body{
+	background-color: rgb(122, 96, 252);
+}
+.auth{
+	border: solid;
+	border-color: gray;
+	background-color: #dddcdc;
+	border-radius: 1em;
+	width: 100%;
+	margin-top:75%;
+
+
+
+
+
+
+}
+.sosa{
+	padding: 10px;
+}
+.sosas{
+	padding: 10px;
+	text-align: right;
+	padding-left: 65%;
+}
+nav{
+	width: 20%;
+	height: 20%;
+
+}

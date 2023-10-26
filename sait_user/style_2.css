@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+.inputs{
+    
+    height: 0;
+    width: 400px;
+    overflow: auto;
+    
+}
+.CEL{
+    text-align: left;
+    height: auto;
+    width: auto;
+}
+.deadline{
+    opacity: 0;
+}
+.DOP_DETALS{
+    width: 400px;
+    height: 0px;
+    overflow: auto;
+    background-color: aqua;
+}
