@@ -5,36 +5,48 @@ if (isset($_POST["login"]) && isset($_POST["psw"])) {
     if($conn->connect_error){
         die("Ошибка: " . $conn->connect_error);
     }
+    
 	$login = $conn->real_escape_string($_POST["login"]);
 	$psw = $conn->real_escape_string($_POST["psw"]);
-    // $NAME_TASK = $conn->real_escape_string($_POST["NAME_TASK"]);
-    // $CEL_TASK = $conn->real_escape_string($_POST["CEL_TASK"]);
-    // $TIME_TASK = $conn->real_escape_string($_POST["TIME_TASK"]);
-    // $NUMBERS_TASK = $conn->real_escape_string($_POST["NUMBERS_TASK"]);
-    // $DATE_TASK = $conn->real_escape_string($_POST["DATE_TASK"]);
-    // $PRIORITY_TASK = $conn->real_escape_string($_POST["PRIORITY_TASK"]);
+	$log = "SELECT  login FROM USER_CREATE";
+	$pas = "SELECT  password FROM USER_CREATE";
+	$sql ="SELECT * FROM USER_CREATE";
+	// if(($login=="admin")&&($psw== "12345")){
+		
+	// }else if($conn->query($sql)){
+	// 	if(($conn->query($log)==$login)&&($conn->query($pas)==$psw)){
+	// 		echo"BIMBAM";
+	// }else{
+		if($result = $conn->query($sql)){
+			foreach($result as $row){
+                 if(($row["login"] == "admin")&&($login == "admin")){
 
-    // $sql = "INSERT INTO TASK (name_task,cel_task,data_task,time_task,numbers_task,priority_task) VALUES ('$NAME_TASK', '$CEL_TASK','$DATE_TASK','$TIME_TASK','$NUMBERS_TASK','$PRIORITY_TASK')";
-    // if($conn->query($sql)){
-    //     echo "Данные успешно добавлены";
-    // } else{
-    //     echo "Ошибка: " . $conn->error;
-    // }
-	if(($login=="admin")&&($psw== "12345")){
-		echo '<script type="text/javascript">function Imba(s){
-			window.location.assign(http://bimbam/HACATOON_2/sait_admin/test.php);
-		}</script>';
-		echo '<button onclick="Imba(1)">Вы админ</button>';
-	}else{
-
-	}
-
-    // $sqll = "SELECT name_task ,cel_task, data_task, time_task ,numbers_task ,priority_task FROM TASK;";
-    // if($conn->query($sqll)){
-    //     echo "BIMBAM";
-    // }
-
+                    if(($row["password"] == "12345")&&($psw == "12345")){
+    
+                        header( 'Location: http://bimbam/HACATOON_2/sait_admin/test.php' );
+    
+                    }
+                } 
+                else if($row["login"] == $login){
+                    if($row["password"] == $psw){
+                    // echo"Такой пользователь существует";
+                    // $handle = fopen("http://bimbam/HACATOON_2/sait_user/test.php","r");
+                    header( 'Location: http://bimbam/HACATOON_2/sait_user/test.php' );
+                    
+                    }
+            }
+            
+            else if($row["login"] != $login){
+                if($row["password"] != $psw){
+                    header( 'Location: http://bimbam/HACATOON_2/avtor/auth.php' );
+                    
+                }
+          }
+		}
+    }
+	// }
+	
+// }
     $conn->close();
 }
 ?>
-

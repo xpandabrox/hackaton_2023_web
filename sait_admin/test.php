@@ -10,80 +10,41 @@
     <script src="test_2.js"> </script>
     
 </head>
-<body vlink="black" link="black">
-    <button onclick="NEW_USER(1)">+</button>
-    
-
+<body vlink="black" link="black" >
+    <div id="JJJJ">
+        <button onclick="NEW_USER(1)" class="NEW_USER">Создать нового пользователя</button>
+        <button class="NEW_USER" id="button" onclick="JJJ('absolute','1')">
+        
+        
+        +
+        
+        
+        </button>
+    </div>
 <table class="tabtask" >
     <tr >
         <td > 
         <div class="process"  >
         
-        <h1>В процессе</h1>
+            <h1>В процессе</h1>
         
-        <button class="button" id="button" onclick="JJJ('absolute','1')">
-        <div>
         
-        +
-        
-        </div>
-    </button>
 
-        <div class="t1" >
+            <div class="t1" >
         
-            <h7>• Task 1</h7>
-            <div>
-                Инфа внутри задачи.
-                <div class="date">
-                    Установите сроки выполнения задачи
-                    <div>
-                        <input type="date">
-                        <input type="time">
+                 <h7>• Task 1</h7>
+                <div>
+                     Инфа внутри задачи.
+                    <div class="date">
+                        Установите сроки выполнения задачи
+                        <div>
+                            <input type="date">
+                            <input type="time">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="t1"><h7>• Task 2</h7>
-            <div>Инфа внутри задачи.
-                <div class="date">
-                Установите сроки выполнения задачи
-                    <div>
-                        <input type="date">
-                        <input type="time">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="t1"><h7>• Task 3</h7>
-            <div>Инфа внутри задачи.
-                <div class="date">
-                Установите сроки выполнения задачи
-                    <div>
-                        <input type="date">
-                        <input type="time">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="t1"><h7>• Task 4</h7>
-            <div>Инфа внутри задачи.
-                <div class="date">
-                Установите сроки выполнения задачи
-                    <div>
-                        <input type="date">
-                        <input type="time">
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-     
-    
-    </div>
-
-
-</td>
-
         <td> 
     <div class="work">
         <h1>Выполнено</h1>
@@ -98,42 +59,7 @@
                 </div>
             </div>
         </div>
-        <div class="t2"><h7>• Task 2</h7>
-            <div>Инфа внутри задачи.
-                <div class="date">
-                    Установите сроки выполнения задачи
-                    <div>
-                        <input type="date">
-                        <input type="time">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="t2"><h7>• Task 3</h7>
-            <div>Инфа внутри задачи.
-                <div class="date">
-                    Установите сроки выполнения задачи
-                    <div>
-                        <input type="date">
-                        <input type="time">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="t2"><h7>• Task 4</h7>
-            <div>Инфа внутри задачи.
-                <div class="date">
-                    Установите сроки выполнения задачи
-                    <div>
-                        <input type="date">
-                        <input type="time">
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</td>
+        
         <td> 
     <div class="denied">
         <h1>Отложено</h1>
@@ -148,42 +74,7 @@
                 </div>
             </div>
         </div>
-        <div class="t3"><h7>• Task 2</h7>
-            <div>Инфа внутри задачи.
-                <div class="date">
-                    Установите сроки выполнения задачи
-                    <div>
-                        <input type="date">
-                        <input type="time">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="t3"><h7>• Task 3</h7>
-            <div>Инфа внутри задачи.
-                <div class="date">
-                    Установите сроки выполнения задачи
-                    <div>
-                        <input type="date">
-                        <input type="time">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="t3"><h7>• Task 4</h7>
-            <div>Инфа внутри задачи.
-                <div class="date">
-                    Установите сроки выполнения задачи
-                    <div>
-                        <input type="date">
-                        <input type="time">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</td>
-    </tr>
+        
 </table>
 <div class="JJJ" id="JJJ">
 <div class="MAIN_DIV" id="MAIN_DIV">
@@ -227,7 +118,9 @@
                 
             </div>
             <div>
+            <form action="/TASK/NEW_TASK.php" method="post">
                 <input type="submit"  value="Сохранить запрос">
+                </form>
             </div>    
             
             </form>

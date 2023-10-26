@@ -11,7 +11,7 @@
 
 <div class="auth">
 				<span class="fontar"><h1>Авторизация</h1></span>
-	<!-- <form action="auth.php" method="post"> -->
+	<form action="authah.php" method="post">
 		<div class="sosa">	
 			<label>Введите логин:   </label>
 			<input type="text" name="login" placeholder="Логин" id="login" >
@@ -23,10 +23,12 @@
 		<div class="sosas">
 			<input type="submit" name="authar" value="Вход" onclick="Imba()">
 		</div>
-	<!-- </form>	 -->
+	</form>	
 
 
 	</div>
+	
+
 
 </head>
 <body>
