@@ -1,10 +1,12 @@
 *{
 	display: flex;
 	padding: 0;
+	flex-direction: column;
 	margin: 0;
 	justify-content: center;
 	align-items: center;
 	top: 200px;
+	
 }
 
 .fontar{
@@ -14,7 +16,6 @@ body{
 	background-color: rgb(122, 96, 252);
 }
 .auth{
-	flex-direction: column;
 	border: solid;
 	border-color: gray;
 	background-color: #dddcdc;
